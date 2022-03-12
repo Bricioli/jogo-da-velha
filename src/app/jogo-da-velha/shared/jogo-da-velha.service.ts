@@ -27,7 +27,8 @@ export class JogoDaVelhaService {
     this._showEnd = false;
     this.numMoviments = 0;
     this._player = this.EXIS;
-    this.win = false; this.initializeBoard();
+    this.win = false;
+    this.initializeBoard();
   }
 
   initializeBoard(): void {

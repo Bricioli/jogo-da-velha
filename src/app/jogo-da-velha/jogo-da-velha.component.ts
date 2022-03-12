@@ -40,6 +40,10 @@ export class JogoDaVelhaComponent implements OnInit {
   showWin(posX: number, posY: number) : boolean {
     return this.jogoDaVelhaService.showWin(posX, posY);
   }
-  
-
+  get player() : number {
+    return this.jogoDaVelhaService.player;
+  }
+  newGame() : void {
+    this.jogoDaVelhaService.newGame();
+  }
 }
