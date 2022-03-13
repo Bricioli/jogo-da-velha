@@ -71,7 +71,7 @@ export class JogoDaVelhaService {
     }
 
     if (this.win !== false) {
-      this._showEnd;
+      this._showEnd = true;
     }
 
     if (!this.win && this.numMoviments === 9) {
@@ -88,10 +88,10 @@ export class JogoDaVelhaService {
       board[line][2] === player) {
       end = [[line, 0], [line, 1], [line, 2]];
     }
-    if (board[column][0] === player &&
-      board[column][1] === player &&
-      board[column][2] === player) {
-      end = [[column, 0], [column, 1], [column, 2]];
+    if (board[0][column] === player &&
+      board[1][column] === player &&
+      board[2][column] === player) {
+      end = [[0,column], [1,column], [2,column]];
     }
     if (board[0][0] === player &&
       board[1][1] === player &&
